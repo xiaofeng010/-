@@ -10,15 +10,19 @@
 
 | 依赖 | 是否必需 | 说明 |
 | --- | --- | --- |
-| Python 3.9+ | 必需 | 只用标准库；`启动.bat` 会自动找 Python |
-| ffplay（ffmpeg 自带） | 试听需要 | 已检测到 `C:\Program Files\ffmpeg\bin\ffplay.exe` |
+| Python 3.9+ | 必需 |
+| ffplay（ffmpeg 自带） | 试听需要 | 位置在 `C:\Program Files\ffmpeg\bin\ffplay.exe` |
 | ffmpeg | 可选 | 用于把「标题/歌手/专辑」写进音频文件标签；缺失时自动跳过 |
 
-> 本机 `python` 命令指向 Microsoft Store 的占位程序，所以 `启动.bat` 里已经内置了
-> 备用解释器路径（`%USERPROFILE%\.dsh\...\python\python.exe`）。若以后自己装了 Python，
-> 脚本会自动优先使用系统 `python`。
+---
+
+
+## 一、启用方式
+
+运行ncmd.py即可使用
 
 ---
+
 
 ## 二、登录方式（启动时会让你选）
 
@@ -149,21 +153,6 @@
 > 不依赖 ffplay 的交互模式，也不受 `-nodisp` 影响。
 
 ---
-
-## 三、命令行参数（可跳过交互）
-
-```bat
-启动.bat --search 晴天                 只搜索并列出结果
-启动.bat --download 起风了 --pick 1    按歌名搜索并下载第 1 个结果
-启动.bat --id 421486605                直接按歌曲 ID 下载
-启动.bat --quality 标准音质 --id 421486605
-启动.bat --dir E:\我的音乐 --id 421486605
-启动.bat --login phone --relogin       用手机号登录（不询问）
-启动.bat --login qr --relogin          用二维码登录（不询问）
-启动.bat --selftest                    自检：目录/播放器/接口/二维码
-启动.bat --relogin                     忽略本地 Cookie，重新登录
-启动.bat --no-play                     选中后不试听，直接问是否下载
-```
 
 ### 下载到哪里？
 
