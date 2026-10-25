@@ -1,0 +1,22 @@
+{
+  "download_dir": "D:\\music",
+  "quality": "无损音质",
+  "quality_fallback": [
+    "无损音质",
+    "极高音质",
+    "标准音质"
+  ],
+  "search_limit": 20,
+  "filename_format": "song-singer",
+  "include_translation": true,
+  "write_srt": false,
+  "tag_metadata": true,
+  "skip_existing": true,
+  "open_player_on_select": true,
+  "login_on_start": true,
+  "login_method": "ask",
+  "playback_debug": false,
+  "player": "ffplay",
+  "request_gap_ms": 1200,
+  "api_base": "https://nextmusic.toubiec.cn"
+}
